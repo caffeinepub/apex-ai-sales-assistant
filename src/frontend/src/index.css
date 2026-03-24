@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.137 0.028 247;
+    --foreground: 0.933 0.025 247;
+    --card: 0.162 0.032 247;
+    --card-foreground: 0.933 0.025 247;
+    --popover: 0.175 0.035 247;
+    --popover-foreground: 0.933 0.025 247;
+    --primary: 0.57 0.22 264;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.245 0.04 247;
+    --secondary-foreground: 0.933 0.025 247;
+    --muted: 0.2 0.035 247;
+    --muted-foreground: 0.687 0.04 247;
+    --accent: 0.245 0.04 247;
+    --accent-foreground: 0.933 0.025 247;
+    --destructive: 0.63 0.22 28;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.245 0.04 247;
+    --input: 0.245 0.04 247;
+    --ring: 0.57 0.22 264;
+    --chart-1: 0.57 0.22 264;
+    --chart-2: 0.81 0.15 183;
+    --chart-3: 0.72 0.2 142;
+    --chart-4: 0.77 0.18 82;
+    --chart-5: 0.63 0.22 28;
+    --sidebar: 0.148 0.031 247;
+    --sidebar-foreground: 0.933 0.025 247;
+    --sidebar-primary: 0.57 0.22 264;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.2 0.035 247;
+    --sidebar-accent-foreground: 0.933 0.025 247;
+    --sidebar-border: 0.245 0.04 247;
+    --sidebar-ring: 0.57 0.22 264;
+    --success: 0.72 0.2 142;
+    --warning: 0.77 0.18 82;
+    --teal: 0.81 0.15 183;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(var(--muted-foreground) / 0.5);
+  }
+}
